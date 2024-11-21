@@ -1,8 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity" />
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        app:srcCompat="@drawable/logo" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/numeros"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="25dp"
+                android:backgroundTint="#319E35"
+                android:gravity="center"
+                android:onClick="IniciarNumbers"
+                android:text="Numbers"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/colores"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="25dp"
+                android:backgroundTint="#B32354"
+                android:gravity="center"
+                android:onClick="iniciarColors"
+                android:text="Colors"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/abecedario"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="25dp"
+                android:backgroundTint="#1D7DCA"
+                android:gravity="center"
+                android:onClick="iniciarAlphabet"
+                android:text="Alphabet"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/formas"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="25dp"
+                android:backgroundTint="#673AB7"
+                android:gravity="center"
+                android:onClick="iniciarForms"
+                android:text="Forms"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/partes"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="25dp"
+                android:backgroundTint="#009688"
+                android:gravity="center"
+                android:onClick="IniciarBodyParts"
+                android:text="Body Parts"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/animales"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="25dp"
+                android:backgroundTint="#FFC107"
+                android:gravity="center"
+                android:onClick="iniciarAnimals"
+                android:text="Animals"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
