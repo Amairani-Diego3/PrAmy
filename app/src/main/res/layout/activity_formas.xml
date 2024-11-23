@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -40,6 +41,120 @@
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/regresar" />
             </FrameLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:rowCount="5">
+
+                <!-- Botón Cuadrado -->
+                <ImageButton
+                    android:id="@+id/buttonSquare"
+                    android:layout_width="164dp"
+                    android:layout_height="143dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icuadrado"
+                    android:text="Square" />
+
+                <!-- Botón Círculo -->
+                <ImageButton
+                    android:id="@+id/buttonCircle"
+                    android:layout_width="164dp"
+                    android:layout_height="145dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icirculo"
+                    android:text="Circle" />
+
+                <!-- Botón Rectángulo -->
+                <ImageButton
+                    android:id="@+id/buttonRectangle"
+                    android:layout_width="164dp"
+                    android:layout_height="137dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/irectangulo"
+                    android:text="Rectangle" />
+
+                <!-- Botón Triángulo -->
+                <ImageButton
+                    android:id="@+id/buttonTriangle"
+                    android:layout_width="165dp"
+                    android:layout_height="136dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/itriangulo"
+                    android:text="Triangle" />
+
+                <!-- Botón Rombo -->
+                <ImageButton
+                    android:id="@+id/buttonTrapezoid"
+                    android:layout_width="165dp"
+                    android:layout_height="152dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/itrapecio"
+                    android:text="Trapezoid" />
+
+                <!-- Botón Pentágono -->
+                <ImageButton
+                    android:id="@+id/buttonPentagon"
+                    android:layout_width="165dp"
+                    android:layout_height="156dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ipentagono"
+                    android:text="Pentagon" />
+
+                <!-- Botón Hexágono -->
+                <ImageButton
+                    android:id="@+id/buttonHexagon"
+                    android:layout_width="162dp"
+                    android:layout_height="158dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ihexagono"
+                    android:text="Hexagon" />
+
+                <!-- Botón Heptágono -->
+                <ImageButton
+                    android:id="@+id/buttonHeptagon"
+                    android:layout_width="165dp"
+                    android:layout_height="158dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/iheptagono"
+                    android:text="Heptagon" />
+
+                <!-- Botón Trapezoide -->
+
+                <!-- Botón Óvalo -->
+                <ImageButton
+                    android:id="@+id/buttonDiamond"
+                    android:layout_width="163dp"
+                    android:layout_height="198dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/irombo"
+                    android:text="Diamond" />
+
+                <ImageButton
+                    android:id="@+id/buttonOval"
+                    android:layout_width="152dp"
+                    android:layout_height="199dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/iovalo"
+                    android:text="Oval" />
+
+            </GridLayout>
+
 
         </LinearLayout>
     </ScrollView>
