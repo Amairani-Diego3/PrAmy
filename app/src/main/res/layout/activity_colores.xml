@@ -115,8 +115,8 @@
                     android:layout_height="51dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="163dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="165dp"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/lgreenn" />
 
