@@ -6,7 +6,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.media.MediaPlayer;
-import android.os.Handler;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,14 +14,50 @@ import android.widget.Toast;
 
 public class Formas extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
-    private Handler handler = new Handler();
+    private Button btnPlay, btnPause, btnStop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formas);
 
-        // Inicializar los botones
+        // Referencias a los botones
+        btnPlay = findViewById(R.id.btnPlay);
+        btnPause = findViewById(R.id.btnPause);
+        btnStop = findViewById(R.id.btnStop);
+
+        // Inicializar el MediaPlayer con un archivo de audio
+        mediaPlayer = MediaPlayer.create(this, R.raw.aforms);
+
+        // Botón Play
+        btnPlay.setOnClickListener(v -> {
+            if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+                mediaPlayer.start();
+            }
+        });
+
+        // Botón Pause
+        btnPause.setOnClickListener(v -> {
+            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+            }
+        });
+
+        // Botón Stop
+        btnStop.setOnClickListener(v -> {
+            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+                mediaPlayer.reset(); // Resetear el MediaPlayer
+                mediaPlayer.release(); // Liberar recursos
+                mediaPlayer = null; // Establecer a null para evitar problemas futuros
+            }
+        });
+
+        // Inicializar los botones de las formas geométricas
+        setupShapeButtons();
+    }
+
+    private void setupShapeButtons() {
         ImageButton buttonSquare = findViewById(R.id.buttonSquare);
         ImageButton buttonCircle = findViewById(R.id.buttonCircle);
         ImageButton buttonRectangle = findViewById(R.id.buttonRectangle);
@@ -33,7 +69,6 @@ public class Formas extends AppCompatActivity {
         ImageButton buttonPentagon = findViewById(R.id.buttonPentagon);
         ImageButton buttonDiamond = findViewById(R.id.buttonDiamond);
 
-        // Configurar las acciones de los botones
         buttonSquare.setOnClickListener(v -> playShape("square"));
         buttonCircle.setOnClickListener(v -> playShape("circle"));
         buttonRectangle.setOnClickListener(v -> playShape("rectangle"));
@@ -49,19 +84,24 @@ public class Formas extends AppCompatActivity {
     private void playShape(String shapeName) {
         // Liberar el MediaPlayer actual si existe
         if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop(); // Detener la reproducción si está en curso
+            }
+            mediaPlayer.reset(); // Resetear el MediaPlayer
+            mediaPlayer.release(); // Liberar recursos
         }
 
         // Reproducir el audio correspondiente
         int audioResId = getAudioResource(shapeName);
         if (audioResId != -1) {
-            mediaPlayer = MediaPlayer.create(this, audioResId);
-            mediaPlayer.start();
+            mediaPlayer = MediaPlayer.create(this, audioResId); // Crear un nuevo MediaPlayer con el audio correcto
             mediaPlayer.setOnCompletionListener(mp -> {
-                mp.release();
-                mediaPlayer = null; // Liberar la referencia
+                mp.release(); // Liberar recursos cuando termine
+                mediaPlayer = null; // Asegurarse de que no quede ninguna referencia
             });
+            mediaPlayer.start(); // Iniciar la reproducción
+        } else {
+            Toast.makeText(this, "Audio no encontrado", Toast.LENGTH_SHORT).show();
         }
 
         // Mostrar el Toast personalizado
@@ -96,20 +136,16 @@ public class Formas extends AppCompatActivity {
     }
 
     private void showCustomToast(String shapeName) {
-        // Inflar el diseño personalizado
         LayoutInflater inflater = getLayoutInflater();
         View toastView = inflater.inflate(R.layout.activity_custom_toast, null);
 
-        // Configurar el mensaje
         TextView toastMessage = toastView.findViewById(R.id.toastMessage);
         toastMessage.setText(shapeName);
 
-        // Configurar el ícono
         ImageView toastIcon = toastView.findViewById(R.id.toastIcon);
         int iconResId = getIconResource(shapeName);
         toastIcon.setImageResource(iconResId);
 
-        // Crear el Toast
         Toast customToast = new Toast(getApplicationContext());
         customToast.setView(toastView);
         customToast.setDuration(Toast.LENGTH_LONG);
@@ -148,7 +184,16 @@ public class Formas extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (mediaPlayer != null) {
-            mediaPlayer.release();
+            mediaPlayer.release(); // Liberar recursos al parar la actividad
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.release(); // Liberar recursos al destruir la actividad
             mediaPlayer = null;
         }
     }

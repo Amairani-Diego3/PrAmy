@@ -101,9 +101,7 @@ public class Colores extends AppCompatActivity {
         scrollLayout = findViewById(R.id.scrollLayout);  // Inicializar el ScrollView (cambiar si tienes otro nombre)
 
         // Configurar el controlador del video (similar a YouTube)
-        MediaController mediaController = new MediaController(this);
-        videoView.setMediaController(mediaController);
-        mediaController.setAnchorView(videoView);
+
 
         // Definir la ruta del video
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.vcolors;  // Cambia `tu_video` por el nombre de tu archivo

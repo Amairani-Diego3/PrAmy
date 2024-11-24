@@ -3,19 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#007E7575"
     android:orientation="vertical"
-    tools:context=".Animales" >
+    tools:context=".Animales">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="432dp"
+        android:layout_height="771dp"
+        android:layout_gravity="center">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="30px">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -40,6 +43,845 @@
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/regresar" />
             </FrameLayout>
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:horizontalSpacing="8dp"
+                android:padding="8dp"
+                android:verticalSpacing="8dp">
+
+                <!-- Ejemplo de un elemento -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/arana"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#00BCD4"
+                        app:srcCompat="@drawable/iarana" />
+
+                    <ImageButton
+                        android:id="@+id/aarana"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+                        android:layout_margin="4px"
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/larana" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/avestruz"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#9C27B0"
+                        app:srcCompat="@drawable/iavestruz" />
+
+                    <ImageButton
+                        android:id="@+id/aavestruz"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lavestruz" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/aguila"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#3F51B5"
+                        app:srcCompat="@drawable/iaguila" />
+
+                    <ImageButton
+                        android:id="@+id/aaguila"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/laguila" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cerdo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#F436D4"
+                        app:srcCompat="@drawable/icerdo" />
+
+                    <ImageButton
+                        android:id="@+id/acerdo"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lcerdo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cebra"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#8BC34A"
+                        app:srcCompat="@drawable/icebra" />
+
+                    <ImageButton
+                        android:id="@+id/acebra"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lcebra" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cocodrilo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#3D393E"
+                        app:srcCompat="@drawable/icocodrilo" />
+
+                    <ImageButton
+                        android:id="@+id/acocodrilo"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lcocodrilo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conejo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#E91E63"
+                        app:srcCompat="@drawable/iconejo" />
+
+                    <ImageButton
+                        android:id="@+id/aconejo"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lconejo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/culebra"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#009688"
+                        app:srcCompat="@drawable/iculebra" />
+
+                    <ImageButton
+                        android:id="@+id/aculebra"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lculebra" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/aperro"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFEB3B"
+                        app:srcCompat="@drawable/iperro" />
+
+                    <ImageButton
+                        android:id="@+id/aaperro"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lperro" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/gato"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#2196F3"
+                        app:srcCompat="@drawable/igato" />
+
+                    <ImageButton
+                        android:id="@+id/agato"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lgato" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/hipopotamo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FF9800"
+                        app:srcCompat="@drawable/ihipopotamo" />
+
+                    <ImageButton
+                        android:id="@+id/ahipopotamo"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lhipopotamo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/jirafa"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#673AB7"
+                        app:srcCompat="@drawable/ijirafa" />
+
+                    <ImageButton
+                        android:id="@+id/ajirafa"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ljirafa" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/leon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#009688"
+                        app:srcCompat="@drawable/ileon" />
+
+                    <ImageButton
+                        android:id="@+id/aleon"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lleon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mono"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#393131"
+                        app:srcCompat="@drawable/imono" />
+
+                    <ImageButton
+                        android:id="@+id/amono"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lmono" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/oso"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#E91E63"
+                        app:srcCompat="@drawable/ioso" />
+
+                    <ImageButton
+                        android:id="@+id/aoso"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/loso" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pajaro"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#CDDC39"
+                        app:srcCompat="@drawable/ipajaro" />
+
+                    <ImageButton
+                        android:id="@+id/apajaro"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lpajaro" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/hormiga"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#4CAF50"
+                        app:srcCompat="@drawable/ihormiga" />
+
+                    <ImageButton
+                        android:id="@+id/ahormiga"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lhormiga" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pescado"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#F44336"
+                        app:srcCompat="@drawable/ipescado" />
+
+                    <ImageButton
+                        android:id="@+id/apescado"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lpescado" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pinguino"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#009688"
+                        app:srcCompat="@drawable/ipinguino" />
+
+                    <ImageButton
+                        android:id="@+id/apinguino"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lpinguino" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/rana"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#9C27B0"
+                        app:srcCompat="@drawable/irana" />
+
+                    <ImageButton
+                        android:id="@+id/aurana"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lrana" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/raton"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#03A9F4"
+                        app:srcCompat="@drawable/iraton" />
+
+                    <ImageButton
+                        android:id="@+id/araton"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lraton" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itiburon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#9C27B0"
+                        app:srcCompat="@drawable/itiburon" />
+
+                    <ImageButton
+                        android:id="@+id/atiburon"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ltiburon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/tortuga"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#331A18"
+                        app:srcCompat="@drawable/itortuga" />
+
+                    <ImageButton
+                        android:id="@+id/atortuga"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ltortuga" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/tucan"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#8BC34A"
+                        app:srcCompat="@drawable/itucan" />
+
+                    <ImageButton
+                        android:id="@+id/atucan"
+                        android:layout_width="100dp"
+                        android:layout_height="22dp"
+
+                        android:background="@color/black"
+                        android:padding="5px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ltucan" />
+
+                </LinearLayout>
+
+                <!-- Repite este bloque para los 24 animales -->
+
+            </GridLayout>
+            <!-- VideoView que inicialmente estará oculto -->
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="223dp"
+                android:visibility="visible" /> <!-- Visible inicialmente para pruebas -->
+
+            <LinearLayout
+                android:id="@+id/controlsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"> <!-- Controles de reproducción -->
+
+                <Button
+                    android:id="@+id/btnPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play"
+                    app:icon="@android:drawable/ic_media_play" />
+
+                <Button
+                    android:id="@+id/btnPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Pause"
+                    app:icon="@android:drawable/ic_media_pause" />
+
+                <Button
+                    android:id="@+id/btnStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Terminar"
+                    app:icon="@android:drawable/checkbox_off_background" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00009688"
+                android:gravity="center"
+                android:paddingLeft="300px"
+                android:text=" QUESTIONNAIRE"
+                android:textColor="#090909"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10px"
+                android:layout_marginBottom="8dp"
+                android:background="#00E91E63"
+                android:text="1. What animal is marine?"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rabbit" />
+
+                <RadioButton
+                    android:id="@+id/option1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fish" />
+
+                <RadioButton
+                    android:id="@+id/option1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zebra" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="#004CAF50"
+                android:text="2. What animal is brown?"
+                android:textColor="#FF9800"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hippo" />
+
+                <RadioButton
+                    android:id="@+id/option2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frog" />
+
+                <RadioButton
+                    android:id="@+id/option2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bear" />
+            </RadioGroup>
+
+            <!-- Pregunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="#003F51B5"
+                android:text="3. What animal flies?"
+                android:textColor="#E91E63"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shark" />
+
+                <RadioButton
+                    android:id="@+id/option3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toucan" />
+
+                <RadioButton
+                    android:id="@+id/option3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cat" />
+            </RadioGroup>
+
+            <!-- Pregunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="#009C27B0"
+                android:text="4. Animal that makes webs?"
+                android:textColor="#4CAF50"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spider" />
+
+                <RadioButton
+                    android:id="@+id/option4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Snake" />
+
+                <RadioButton
+                    android:id="@+id/option4_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chameleon" />
+            </RadioGroup>
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingEnd="50px"
+                android:text="Submit" />
 
         </LinearLayout>
     </ScrollView>
