@@ -16,8 +16,8 @@ public class Animales extends AppCompatActivity {
     private VideoView videoView;
     private Button btnPlay, btnPause, btnStop;
 
-    MediaPlayer mp; // Objeto MediaPlayer para reproducir los sonidos
-    ImageButton[] animalButtons; // Array de botones de animales
+    MediaPlayer mp;
+    ImageButton[] animalButtons;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +33,10 @@ public class Animales extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int[] correctAnswers = {
-                        R.id.option1_2, // Fish
-                        R.id.option2_3, // Bear
-                        R.id.option3_2, // Toucan
-                        R.id.option4_1  // Spider
+                        R.id.option1_2,
+                        R.id.option2_3,
+                        R.id.option3_2,
+                        R.id.option4_1
                 };
 
                 int[] selectedAnswers = {
@@ -65,38 +65,36 @@ public class Animales extends AppCompatActivity {
 
 
 
-        // Inicializar vistas
         videoView = findViewById(R.id.videoView);
         btnPlay = findViewById(R.id.btnPlay);
         btnPause = findViewById(R.id.btnPause);
         btnStop = findViewById(R.id.btnStop);
 
-        // Configurar el video
+
         Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.vanimals); // Reemplaza "nombre_del_video" con el nombre real
         videoView.setVideoURI(videoUri);
 
-        // Acción para el botón Play
+
         btnPlay.setOnClickListener(v -> {
-            videoView.start(); // Inicia o reanuda el video
+            videoView.start();
         });
 
-        // Acción para el botón Pause
         btnPause.setOnClickListener(v -> {
             if (videoView.isPlaying()) {
-                videoView.pause(); // Pausa el video si está reproduciéndose
+                videoView.pause();
             }
         });
 
-        // Acción para el botón Terminar
+
         btnStop.setOnClickListener(v -> {
-            videoView.stopPlayback(); // Detiene la reproducción
-            videoView.setVideoURI(videoUri); // Reinicia el VideoView
-            videoView.seekTo(0); // Posiciona el video al inicio
+            videoView.stopPlayback();
+            videoView.setVideoURI(videoUri);
+            videoView.seekTo(0);
         });
 
 
 
-        // Inicializar los botones de animales
+
         animalButtons = new ImageButton[]{
                 findViewById(R.id.aarana),
                 findViewById(R.id.aavestruz),
@@ -124,17 +122,17 @@ public class Animales extends AppCompatActivity {
                 findViewById(R.id.atucan)
         };
 
-        // Listener para manejar los clics en los botones
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Liberar el recurso del MediaPlayer si ya está en uso
+
                 if (mp != null) {
                     mp.release();
                     mp = null;
                 }
 
-                // Asignar el sonido correspondiente al botón presionado
+
                 switch (view.getId()) {
                     case R.id.aarana:
                         mp = MediaPlayer.create(Animales.this, R.raw.aspider);
@@ -210,14 +208,14 @@ public class Animales extends AppCompatActivity {
                         break;
                 }
 
-                // Reproducir el sonido si el MediaPlayer no es nulo
+
                 if (mp != null) {
                     mp.start();
                 }
             }
         };
 
-        // Asignar el listener a todos los botones
+
         for (ImageButton button : animalButtons) {
             button.setOnClickListener(listener);
         }
@@ -225,7 +223,7 @@ public class Animales extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        // Liberar el MediaPlayer al cerrar la actividad para evitar fugas de memoria
+
         if (mp != null) {
             mp.release();
             mp = null;

@@ -21,39 +21,38 @@ public class Formas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formas);
 
-        // Referencias a los botones
+
         btnPlay = findViewById(R.id.btnPlay);
         btnPause = findViewById(R.id.btnPause);
         btnStop = findViewById(R.id.btnStop);
 
-        // Inicializar el MediaPlayer con un archivo de audio
+
         mediaPlayer = MediaPlayer.create(this, R.raw.aforms);
 
-        // Botón Play
+
         btnPlay.setOnClickListener(v -> {
             if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
                 mediaPlayer.start();
             }
         });
 
-        // Botón Pause
         btnPause.setOnClickListener(v -> {
             if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.pause();
             }
         });
 
-        // Botón Stop
+
         btnStop.setOnClickListener(v -> {
             if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
-                mediaPlayer.reset(); // Resetear el MediaPlayer
-                mediaPlayer.release(); // Liberar recursos
-                mediaPlayer = null; // Establecer a null para evitar problemas futuros
+                mediaPlayer.reset();
+                mediaPlayer.release();
+                mediaPlayer = null;
             }
         });
 
-        // Inicializar los botones de las formas geométricas
+
         setupShapeButtons();
     }
 
@@ -82,29 +81,29 @@ public class Formas extends AppCompatActivity {
     }
 
     private void playShape(String shapeName) {
-        // Liberar el MediaPlayer actual si existe
+
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop(); // Detener la reproducción si está en curso
+                mediaPlayer.stop();
             }
-            mediaPlayer.reset(); // Resetear el MediaPlayer
-            mediaPlayer.release(); // Liberar recursos
+            mediaPlayer.reset();
+            mediaPlayer.release();
         }
 
-        // Reproducir el audio correspondiente
+
         int audioResId = getAudioResource(shapeName);
         if (audioResId != -1) {
-            mediaPlayer = MediaPlayer.create(this, audioResId); // Crear un nuevo MediaPlayer con el audio correcto
+            mediaPlayer = MediaPlayer.create(this, audioResId);
             mediaPlayer.setOnCompletionListener(mp -> {
-                mp.release(); // Liberar recursos cuando termine
-                mediaPlayer = null; // Asegurarse de que no quede ninguna referencia
+                mp.release();
+                mediaPlayer = null;
             });
-            mediaPlayer.start(); // Iniciar la reproducción
+            mediaPlayer.start();
         } else {
             Toast.makeText(this, "Audio no encontrado", Toast.LENGTH_SHORT).show();
         }
 
-        // Mostrar el Toast personalizado
+
         showCustomToast(shapeName);
     }
 
@@ -184,7 +183,7 @@ public class Formas extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (mediaPlayer != null) {
-            mediaPlayer.release(); // Liberar recursos al parar la actividad
+            mediaPlayer.release();
             mediaPlayer = null;
         }
     }
@@ -193,7 +192,7 @@ public class Formas extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         if (mediaPlayer != null) {
-            mediaPlayer.release(); // Liberar recursos al destruir la actividad
+            mediaPlayer.release();
             mediaPlayer = null;
         }
     }
