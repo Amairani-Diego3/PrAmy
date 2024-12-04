@@ -4,6 +4,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.VideoView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -22,14 +24,53 @@ public class Abecedario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abecedario);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
+        RadioGroup radioGroup1 = findViewById(R.id.radioGroup1);
+        RadioGroup radioGroup2 = findViewById(R.id.radioGroup2);
+        RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
+        RadioGroup radioGroup4 = findViewById(R.id.radioGroup4);
 
-        // Inicializar VideoView y controles
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] correctAnswers = {
+                        R.id.option1_2,
+                        R.id.option2_3,
+                        R.id.option3_2,
+                        R.id.option4_1
+                };
+
+                int[] selectedAnswers = {
+                        radioGroup1.getCheckedRadioButtonId(),
+                        radioGroup2.getCheckedRadioButtonId(),
+                        radioGroup3.getCheckedRadioButtonId(),
+                        radioGroup4.getCheckedRadioButtonId()
+                };
+
+                int score = 0;
+                StringBuilder feedback = new StringBuilder();
+
+                for (int i = 0; i < selectedAnswers.length; i++) {
+                    if (selectedAnswers[i] == correctAnswers[i]) {
+                        score++;
+                        feedback.append("Question ").append(i + 1).append(": Correct!\n");
+                    } else {
+                        feedback.append("Question ").append(i + 1).append(": Wrong!\n");
+                    }
+                }
+
+                Toast.makeText(Abecedario.this, feedback.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+
         videoView = findViewById(R.id.videoView);
         controlsLayout = findViewById(R.id.controlsLayout);
         btnPlayPause = findViewById(R.id.btnPlayPause);
         btnClose = findViewById(R.id.btnClose);
 
-        // Botón para mostrar el VideoView
+
         ImageView videoButton = findViewById(R.id.videoAlfabeto);
         videoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +79,6 @@ public class Abecedario extends AppCompatActivity {
             }
         });
 
-        // Configurar ImageViews para cada letra
         configureImageView(R.id.imageViewA, "a");
         configureImageView(R.id.imageViewB, "b");
         configureImageView(R.id.imageViewC, "c");
@@ -76,21 +116,22 @@ public class Abecedario extends AppCompatActivity {
                 int audioResource = getAudioResource(letter);
 
                 if (audioResource != -1) {
-                    // Reproducir el sonido asociado a la letra
+
                     MediaPlayer mediaPlayer = MediaPlayer.create(Abecedario.this, audioResource);
                     mediaPlayer.start();
 
-                    // Liberar el reproductor después de que el audio finalice
+
                     mediaPlayer.setOnCompletionListener(MediaPlayer::release);
                 }
             }
         });
     }
 
+
     private int getAudioResource(String letter) {
         switch (letter) {
             case "a":
-                return R.raw.a;  // Asegúrate de tener los archivos de audio correspondientes en res/raw
+                return R.raw.a;
             case "b":
                 return R.raw.b;
             case "c":
@@ -142,20 +183,19 @@ public class Abecedario extends AppCompatActivity {
             case "z":
                 return R.raw.z;
             default:
-                return -1;  // Retorna -1 si no se encuentra la letra
+                return -1;
         }
     }
 
     private void showVideo() {
-        // Mostrar VideoView y controles
+
         videoView.setVisibility(View.VISIBLE);
         controlsLayout.setVisibility(View.VISIBLE);
 
-        // Reproducir el video correspondiente
+
         videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_a));
         videoView.start();
 
-        // Configurar los controles de reproducción
         btnPlayPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -169,7 +209,7 @@ public class Abecedario extends AppCompatActivity {
             }
         });
 
-        // Configurar el botón de cerrar
+
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -180,8 +220,9 @@ public class Abecedario extends AppCompatActivity {
         });
     }
 
-    // Método para cerrar la actividad cuando el botón "regresar" es presionado
-    public void regresarAlphabet(View view) {
+
+    public void regresarBodyParts(View view) {
         this.finish();
     }
+
 }

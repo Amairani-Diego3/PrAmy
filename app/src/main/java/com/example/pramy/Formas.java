@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,45 @@ public class Formas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formas);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
+        RadioGroup radioGroup1 = findViewById(R.id.radioGroup1);
+        RadioGroup radioGroup2 = findViewById(R.id.radioGroup2);
+        RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
+        RadioGroup radioGroup4 = findViewById(R.id.radioGroup4);
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] correctAnswers = {
+                        R.id.option1_2,
+                        R.id.option2_3,
+                        R.id.option3_2,
+                        R.id.option4_1
+                };
+
+                int[] selectedAnswers = {
+                        radioGroup1.getCheckedRadioButtonId(),
+                        radioGroup2.getCheckedRadioButtonId(),
+                        radioGroup3.getCheckedRadioButtonId(),
+                        radioGroup4.getCheckedRadioButtonId()
+                };
+
+                int score = 0;
+                StringBuilder feedback = new StringBuilder();
+
+                for (int i = 0; i < selectedAnswers.length; i++) {
+                    if (selectedAnswers[i] == correctAnswers[i]) {
+                        score++;
+                        feedback.append("Question ").append(i + 1).append(": Correct!\n");
+                    } else {
+                        feedback.append("Question ").append(i + 1).append(": Wrong!\n");
+                    }
+                }
+
+                Toast.makeText(Formas.this, feedback.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
 
 
         btnPlay = findViewById(R.id.btnPlay);
@@ -104,7 +144,7 @@ public class Formas extends AppCompatActivity {
         }
 
 
-        showCustomToast(shapeName);
+
     }
 
     private int getAudioResource(String shapeName) {
@@ -134,50 +174,6 @@ public class Formas extends AppCompatActivity {
         }
     }
 
-    private void showCustomToast(String shapeName) {
-        LayoutInflater inflater = getLayoutInflater();
-        View toastView = inflater.inflate(R.layout.activity_custom_toast, null);
-
-        TextView toastMessage = toastView.findViewById(R.id.toastMessage);
-        toastMessage.setText(shapeName);
-
-        ImageView toastIcon = toastView.findViewById(R.id.toastIcon);
-        int iconResId = getIconResource(shapeName);
-        toastIcon.setImageResource(iconResId);
-
-        Toast customToast = new Toast(getApplicationContext());
-        customToast.setView(toastView);
-        customToast.setDuration(Toast.LENGTH_LONG);
-        customToast.setGravity(Gravity.CENTER, 0, 0);
-        customToast.show();
-    }
-
-    private int getIconResource(String shapeName) {
-        switch (shapeName) {
-            case "square":
-                return R.drawable.icuadrado;
-            case "circle":
-                return R.drawable.icirculo;
-            case "rectangle":
-                return R.drawable.irectangulo;
-            case "triangle":
-                return R.drawable.itriangulo;
-            case "diamond":
-                return R.drawable.irombo;
-            case "pentagon":
-                return R.drawable.ipentagono;
-            case "hexagon":
-                return R.drawable.ihexagono;
-            case "heptagon":
-                return R.drawable.iheptagono;
-            case "trapezoid":
-                return R.drawable.itrapecio;
-            case "oval":
-                return R.drawable.iovalo;
-            default:
-                return R.drawable.ibluee;
-        }
-    }
 
     @Override
     protected void onStop() {

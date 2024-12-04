@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class Numeros extends AppCompatActivity {
@@ -22,6 +24,46 @@ public class Numeros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numeros);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
+        RadioGroup radioGroup1 = findViewById(R.id.radioGroup1);
+        RadioGroup radioGroup2 = findViewById(R.id.radioGroup2);
+        RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
+        RadioGroup radioGroup4 = findViewById(R.id.radioGroup4);
+
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] correctAnswers = {
+                        R.id.option1_2,
+                        R.id.option2_3,
+                        R.id.option3_2,
+                        R.id.option4_1
+                };
+
+                int[] selectedAnswers = {
+                        radioGroup1.getCheckedRadioButtonId(),
+                        radioGroup2.getCheckedRadioButtonId(),
+                        radioGroup3.getCheckedRadioButtonId(),
+                        radioGroup4.getCheckedRadioButtonId()
+                };
+
+                int score = 0;
+                StringBuilder feedback = new StringBuilder();
+
+                for (int i = 0; i < selectedAnswers.length; i++) {
+                    if (selectedAnswers[i] == correctAnswers[i]) {
+                        score++;
+                        feedback.append("Question ").append(i + 1).append(": Correct!\n");
+                    } else {
+                        feedback.append("Question ").append(i + 1).append(": Wrong!\n");
+                    }
+                }
+
+                Toast.makeText(Numeros.this, feedback.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
 
         // Configurar ImageViews para los números
         configureImageView(R.id.imageView6, "one");
@@ -131,5 +173,8 @@ public class Numeros extends AppCompatActivity {
             default:
                 return -1;
         }
+    }
+    public void regresarNumbers(View view) {
+        this.finish();
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#008BC34A"
+    android:background="@drawable/fondo"
     android:orientation="vertical"
     tools:context=".Formas">
 
@@ -173,11 +173,12 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#0000BCD4"
+
+                android:background="#5A6283"
                 android:gravity="center"
                 android:padding="40px"
                 android:text="Once upon a time, there was a magical and colorful kingdom called Shapeville, where geometric shapes lived: circles, triangles, squares, rectangles, and many more. Each shape had its own unique talent and a special role in the kingdom.  At the heart of Shapeville was the Great Circle, a wise and perfect circle that always rolled around joyfully. Surrounding it, the squares built sturdy buildings, the triangles constructed strong bridges, and the rectangles arranged the windows and doors of the kingdom.  One day, a strange Irregular Polygon arrived in the kingdom. It was different from all the other shapes: its sides were uneven, and it didn’t seem to fit anywhere. The squares and triangles looked at it with distrust.  “You can’t be part of our kingdom!” said the squares. “You don’t fit in our buildings.”  “And you don’t belong on our bridges!” added the triangles.  The polygon felt sad and rolled away to the forest. There, it met the Great Circle, who looked at it curiously.  “Why are you so sad?” asked the circle.  “Because I’m different, and no one needs me,” replied the polygon.  The circle smiled kindly and said: “In Shapeville, every shape is important. We just need to find your place.”  The Great Circle led the polygon to an empty field near the river. With its unique shape, the polygon fit perfectly to stop the water that used to flood the kingdom.  When the inhabitants of Shapeville saw this, they realized how valuable the polygon was. From that day on, all the shapes, no matter how different they were, worked together to make Shapeville an even more magical place.  And so, they lived happily ever after, proving that true strength lies in diversity."
-                android:textColor="#040404"
+                android:textColor="#FBF8F8"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -213,7 +214,192 @@
                     app:icon="@android:drawable/checkbox_off_background" />
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start|center_horizontal|center_vertical"
+                android:paddingLeft="300px"
+                android:text=" QUESTIONNAIRE"
+                android:textColor="#090909"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10px"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="1. Does it have 4 sides?"
+                android:textColor="#3F51B5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Circle"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Square"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Pentagon"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="2. Doesn't it have sides?"
+                android:textColor="#FF9800"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Pentagon"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Triangle"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Circle"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Pregunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="3. Does it have 3 sides?"
+                android:textColor="#E91E63"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Diamond"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Triangle"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Cat"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Pregunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="4. Does it have 5 sides?"
+                android:textColor="#4CAF50"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Pentagon"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diamond"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option4_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Square"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingEnd="50px"
+                android:text="Submit" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

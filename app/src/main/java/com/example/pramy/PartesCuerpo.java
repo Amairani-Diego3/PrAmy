@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.VideoView;
 import android.widget.MediaController;
 
@@ -23,6 +25,44 @@ public class PartesCuerpo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partes_cuerpo);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
+        RadioGroup radioGroup1 = findViewById(R.id.radioGroup1);
+        RadioGroup radioGroup2 = findViewById(R.id.radioGroup2);
+        RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
+        RadioGroup radioGroup4 = findViewById(R.id.radioGroup4);
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] correctAnswers = {
+                        R.id.option1_2,
+                        R.id.option2_3,
+                        R.id.option3_2,
+                        R.id.option4_1
+                };
+
+                int[] selectedAnswers = {
+                        radioGroup1.getCheckedRadioButtonId(),
+                        radioGroup2.getCheckedRadioButtonId(),
+                        radioGroup3.getCheckedRadioButtonId(),
+                        radioGroup4.getCheckedRadioButtonId()
+                };
+
+                int score = 0;
+                StringBuilder feedback = new StringBuilder();
+
+                for (int i = 0; i < selectedAnswers.length; i++) {
+                    if (selectedAnswers[i] == correctAnswers[i]) {
+                        score++;
+                        feedback.append("Question ").append(i + 1).append(": Correct!\n");
+                    } else {
+                        feedback.append("Question ").append(i + 1).append(": Wrong!\n");
+                    }
+                }
+
+                Toast.makeText(PartesCuerpo.this, feedback.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
 
         // Configurar ImageViews para las partes del cuerpo
         configureImageView(R.id.imageView27, "head");
@@ -126,5 +166,8 @@ public class PartesCuerpo extends AppCompatActivity {
             default:
                 return -1;  // Retorna -1 si no se encuentra la parte
         }
+    }
+    public void regresarBodyParts(View view) {
+        this.finish();
     }
 }

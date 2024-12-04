@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     android:orientation="vertical"
     tools:context=".PartesCuerpo">
 
@@ -91,6 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/white"
                     app:srcCompat="@drawable/head" />
 
                 <ImageView
@@ -98,6 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="#FDFBFB"
                     app:srcCompat="@drawable/face" />
             </LinearLayout>
 
@@ -111,6 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#FDFBFB"
                     app:srcCompat="@drawable/eye" />
 
                 <ImageView
@@ -118,6 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#FDFCFC"
                     app:srcCompat="@drawable/nose" />
             </LinearLayout>
 
@@ -131,13 +136,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#FDFBFB"
                     app:srcCompat="@drawable/ear" />
 
                 <ImageView
                     android:id="@+id/imageView32"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="280dp"
                     android:layout_weight="1"
+                    android:background="#FDFBFB"
                     app:srcCompat="@drawable/neck" />
             </LinearLayout>
 
@@ -151,6 +158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#FFFEFE"
                     app:srcCompat="@drawable/mouth" />
 
                 <ImageView
@@ -158,8 +166,196 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#FFFCFC"
                     app:srcCompat="@drawable/teeth" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start|center_horizontal|center_vertical"
+                android:paddingLeft="300px"
+                android:text=" QUESTIONNAIRE"
+                android:textColor="#090909"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10px"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="1. Part of the eye with which you listen?"
+                android:textColor="#3F51B5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Nose"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Ear"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Arm"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="2. What part of the body do you write with?"
+                android:textColor="#FF9800"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Ear"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Eye"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Arm"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Pregunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="3. Part you have in your hand?"
+                android:textColor="#E91E63"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Leg"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Finger"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Nose"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Pregunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="4. Where do you breathe?"
+                android:textColor="#4CAF50"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Nose"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belly"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/option4_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="Head"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingEnd="50px"
+                android:text="Submit" />
 
         </LinearLayout>
     </ScrollView>
