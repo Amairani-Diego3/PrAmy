@@ -64,7 +64,7 @@ public class PartesCuerpo extends AppCompatActivity {
             }
         });
 
-        // Configurar ImageViews para las partes del cuerpo
+
         configureImageView(R.id.imageView27, "head");
         configureImageView(R.id.imageView28, "face");
         configureImageView(R.id.imageView29, "eye");
@@ -73,23 +73,27 @@ public class PartesCuerpo extends AppCompatActivity {
         configureImageView(R.id.imageView32, "neck");
         configureImageView(R.id.imageView33, "mouth");
         configureImageView(R.id.imageView34, "teeth");
+        configureImageView(R.id.p1, "p1");
+        configureImageView(R.id.p2, "p2");
+        configureImageView(R.id.p3, "p3");
+        configureImageView(R.id.p4, "p4");
 
-        // Configurar VideoView y controles
+
         videoView = findViewById(R.id.videoView);
         btnPlayPause = findViewById(R.id.btnPlayPause);
         btnClose = findViewById(R.id.btnClose);
         controlsLayout = findViewById(R.id.controlsLayout);
 
-        // Configurar el controlador del video
+
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
 
-        // Ruta del video
+
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.parts_of_body_video; // Asegúrate de tener el video adecuado
         videoView.setVideoPath(videoPath);
 
-        // Configurar botón Play/Pause
+
         btnPlayPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,7 +108,7 @@ public class PartesCuerpo extends AppCompatActivity {
             }
         });
 
-        // Configurar botón Cerrar
+
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,7 +120,7 @@ public class PartesCuerpo extends AppCompatActivity {
             }
         });
 
-        // Mostrar video al cargar la actividad (opcional)
+
         videoView.setVisibility(View.VISIBLE);
         controlsLayout.setVisibility(View.VISIBLE);
         videoView.start();
@@ -127,18 +131,18 @@ public class PartesCuerpo extends AppCompatActivity {
     private void configureImageView(int imageViewId, String partName) {
         ImageView imageView = findViewById(imageViewId);
 
-        // Configurar el clic en la imagen
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int audioResource = getAudioResource(partName);
 
                 if (audioResource != -1) {
-                    // Reproducir el sonido asociado a la parte del cuerpo
+
                     MediaPlayer mediaPlayer = MediaPlayer.create(PartesCuerpo.this, audioResource);
                     mediaPlayer.start();
 
-                    // Liberar el reproductor después de que el audio finalice
+
                     mediaPlayer.setOnCompletionListener(MediaPlayer::release);
                 }
             }
@@ -148,7 +152,7 @@ public class PartesCuerpo extends AppCompatActivity {
     private int getAudioResource(String partName) {
         switch (partName) {
             case "head":
-                return R.raw.ahead;  // Asegúrate de tener estos archivos en res/raw
+                return R.raw.ahead;
             case "face":
                 return R.raw.aface;
             case "eye":
@@ -163,8 +167,16 @@ public class PartesCuerpo extends AppCompatActivity {
                 return R.raw.amouth;
             case "teeth":
                 return R.raw.teeth;
+            case "p1":
+                return R.raw.preg1pa;
+            case "p2":
+                return R.raw.preg2pa;
+            case "p3":
+                return R.raw.preg3pa;
+            case "p4":
+                return R.raw.preg4pa;
             default:
-                return -1;  // Retorna -1 si no se encuentra la parte
+                return -1;
         }
     }
     public void regresarBodyParts(View view) {

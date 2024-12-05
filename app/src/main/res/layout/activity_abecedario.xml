@@ -81,7 +81,7 @@
                 app:srcCompat="@android:drawable/ic_menu_slideshow" />
 
 
-            <!-- Imágenes del alfabeto en horizontal -->
+            <!-- Imágenes del alfabeto  -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -365,17 +365,32 @@
                 android:textColor="#090909"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10px"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="1. What letter does the word Table begin with?"
-                android:textColor="#3F51B5"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="209dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10px"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="1. What letter does the word Table begin with?"
+                    android:textColor="#3F51B5"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/p1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="300px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#2196F3"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radioGroup1"
@@ -408,16 +423,30 @@
             </RadioGroup>
 
             <!-- Pregunta 2 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="2. Maria's initial?"
-                android:textColor="#FF9800"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="2. Maria's initial?"
+                    android:textColor="#FF9800"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="500px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
@@ -450,16 +479,32 @@
             </RadioGroup>
 
             <!-- Pregunta 3 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="3. Dog Initial?"
-                android:textColor="#E91E63"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="3. Dog Initial?"
+                    android:textColor="#E91E63"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/p3"
+                    android:layout_width="67dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="550px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radioGroup3"
@@ -492,16 +537,34 @@
             </RadioGroup>
 
             <!-- Pregunta 4 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="4. First letter of the alphabet?"
-                android:textColor="#4CAF50"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="4. First letter of the alphabet?"
+                    android:textColor="#4CAF50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/p4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="250px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
+
+
 
             <RadioGroup
                 android:id="@+id/radioGroup4"

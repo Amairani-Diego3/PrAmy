@@ -107,6 +107,10 @@ public class Formas extends AppCompatActivity {
         ImageButton buttonHexagon = findViewById(R.id.buttonHexagon);
         ImageButton buttonPentagon = findViewById(R.id.buttonPentagon);
         ImageButton buttonDiamond = findViewById(R.id.buttonDiamond);
+        ImageButton p1 = findViewById(R.id.p1);
+        ImageButton p2 = findViewById(R.id.p2);
+        ImageButton p3 = findViewById(R.id.p3);
+        ImageButton p4 = findViewById(R.id.p4);
 
         buttonSquare.setOnClickListener(v -> playShape("square"));
         buttonCircle.setOnClickListener(v -> playShape("circle"));
@@ -118,6 +122,11 @@ public class Formas extends AppCompatActivity {
         buttonHexagon.setOnClickListener(v -> playShape("hexagon"));
         buttonPentagon.setOnClickListener(v -> playShape("pentagon"));
         buttonDiamond.setOnClickListener(v -> playShape("diamond"));
+        p1.setOnClickListener(v -> playShape("p1"));
+        p2.setOnClickListener(v -> playShape("p2"));
+        p3.setOnClickListener(v -> playShape("p3"));
+        p4.setOnClickListener(v -> playShape("p4"));
+
     }
 
     private void playShape(String shapeName) {
@@ -169,6 +178,14 @@ public class Formas extends AppCompatActivity {
                 return R.raw.trapezoid;
             case "oval":
                 return R.raw.oval;
+            case "p1":
+                return R.raw.preg1fo;
+            case "p2":
+                return R.raw.preg2fo;
+            case "p3":
+                return R.raw.preg3fo;
+            case "p4":
+                return R.raw.preg4fo;
             default:
                 return -1;
         }

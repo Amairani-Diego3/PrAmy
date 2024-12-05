@@ -105,6 +105,10 @@ public class Abecedario extends AppCompatActivity {
         configureImageView(R.id.imageViewX, "x");
         configureImageView(R.id.imageViewY, "y");
         configureImageView(R.id.imageViewZ, "z");
+        configureImageView(R.id.p1, "btn1");
+        configureImageView(R.id.p2, "btn2");
+        configureImageView(R.id.p3, "btn3");
+        configureImageView(R.id.p4, "btn4");
     }
 
     private void configureImageView(int imageViewId, String letter) {
@@ -182,6 +186,14 @@ public class Abecedario extends AppCompatActivity {
                 return R.raw.y;
             case "z":
                 return R.raw.z;
+            case "btn1":
+                return R.raw.preg1ab;
+            case "btn2":
+                return R.raw.preg2ab;
+            case "btn3":
+                return R.raw.preg3ab;
+            case "btn4":
+                return R.raw.preg4ab;
             default:
                 return -1;
         }

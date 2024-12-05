@@ -65,7 +65,7 @@ public class Numeros extends AppCompatActivity {
         });
 
 
-        // Configurar ImageViews para los números
+
         configureImageView(R.id.imageView6, "one");
         configureImageView(R.id.imageView7, "two");
         configureImageView(R.id.three, "three");
@@ -76,23 +76,27 @@ public class Numeros extends AppCompatActivity {
         configureImageView(R.id.imageView13, "eight");
         configureImageView(R.id.imageView14, "nine");
         configureImageView(R.id.imageView15, "ten");
+        configureImageView(R.id.p1, "btn1");
+        configureImageView(R.id.p2, "btn2");
+        configureImageView(R.id.p3, "btn3");
+        configureImageView(R.id.p4, "btn4");
 
-        // Configurar VideoView y controles
+
         videoView = findViewById(R.id.videoView);
         btnPlayPause = findViewById(R.id.btnPlayPause);
         btnClose = findViewById(R.id.btnClose);
         controlsLayout = findViewById(R.id.controlsLayout);
 
-        // Configurar el controlador del video
+
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
 
-        // Ruta del video
+
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.numbers; // Cambia `vnumbers` por el nombre de tu archivo de video
         videoView.setVideoPath(videoPath);
 
-        // Configurar botón Play/Pause
+
         btnPlayPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +111,7 @@ public class Numeros extends AppCompatActivity {
             }
         });
 
-        // Configurar botón Cerrar
+
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,7 +123,7 @@ public class Numeros extends AppCompatActivity {
             }
         });
 
-        // Mostrar video al cargar la actividad (opcional)
+
         videoView.setVisibility(View.VISIBLE);
         controlsLayout.setVisibility(View.VISIBLE);
         videoView.start();
@@ -130,18 +134,18 @@ public class Numeros extends AppCompatActivity {
     private void configureImageView(int imageViewId, String numberName) {
         ImageView imageView = findViewById(imageViewId);
 
-        // Configurar el clic en el ImageView
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int audioResource = getAudioResource(numberName);
 
                 if (audioResource != -1) {
-                    // Reproducir el sonido asociado al número
+
                     MediaPlayer mediaPlayer = MediaPlayer.create(Numeros.this, audioResource);
                     mediaPlayer.start();
 
-                    // Liberar el reproductor después de que el audio finalice
+
                     mediaPlayer.setOnCompletionListener(MediaPlayer::release);
                 }
             }
@@ -170,6 +174,14 @@ public class Numeros extends AppCompatActivity {
                 return R.raw.nine;
             case "ten":
                 return R.raw.ten;
+            case "btn1":
+                return R.raw.preg1nu;
+            case "btn2":
+                return R.raw.preg2nu;
+            case "btn3":
+                return R.raw.preg3nu;
+            case "btn4":
+                return R.raw.preg4nu;
             default:
                 return -1;
         }

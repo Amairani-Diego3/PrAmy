@@ -57,14 +57,13 @@
                     android:scaleType="fitXY"
                     app:srcCompat="@android:drawable/ic_menu_slideshow" />
             </RelativeLayout>
-            <!-- VideoView que inicialmente estará oculto -->
+
             <VideoView
                 android:id="@+id/videoView"
                 android:layout_width="match_parent"
                 android:layout_height="663dp"
                 android:visibility="gone" />  <!-- Inicialmente invisible -->
 
-            <!-- Controles de Play/Pause, y otros, que también estarán ocultos inicialmente -->
 
             <LinearLayout
                 android:id="@+id/controlsLayout"
@@ -245,17 +244,32 @@
                 android:textColor="#090909"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10px"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="1. Color of the sun?"
-                android:textColor="#3F51B5"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10px"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="1. Color of the sun?"
+                    android:textColor="#3F51B5"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/p1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="500px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radioGroup1"
@@ -288,16 +302,32 @@
             </RadioGroup>
 
             <!-- Pregunta 2 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="2. Color of the moon?"
-                android:textColor="#FF9800"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="2. Color of the moon?"
+                    android:textColor="#FF9800"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="500px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
+
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
@@ -330,16 +360,32 @@
             </RadioGroup>
 
             <!-- Pregunta 3 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="3. Color of a tree?"
-                android:textColor="#E91E63"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="3. Color of a tree?"
+                    android:textColor="#E91E63"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/p3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="500px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radioGroup3"
@@ -372,16 +418,34 @@
             </RadioGroup>
 
             <!-- Pregunta 4 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:text="4. Color of love?"
-                android:textColor="#4CAF50"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:text="4. Color of love?"
+                    android:textColor="#4CAF50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/p4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="500px"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+            </LinearLayout>
+
+
 
             <RadioGroup
                 android:id="@+id/radioGroup4"

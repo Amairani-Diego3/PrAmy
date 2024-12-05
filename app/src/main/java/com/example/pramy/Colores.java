@@ -78,7 +78,11 @@ public class Colores extends AppCompatActivity {
                 findViewById(R.id.bbrown),
                 findViewById(R.id.bblack),
                 findViewById(R.id.bpurple),
-                findViewById(R.id.bgray)
+                findViewById(R.id.bgray),
+                findViewById(R.id.p1),
+                findViewById(R.id.p2),
+                findViewById(R.id.p3),
+                findViewById(R.id.p4),
         };
 
 
@@ -118,6 +122,18 @@ public class Colores extends AppCompatActivity {
                         break;
                     case R.id.bblack:
                         mp = MediaPlayer.create(Colores.this, R.raw.ablack);
+                        break;
+                    case R.id.p1:
+                        mp = MediaPlayer.create(Colores.this, R.raw.preg1co);
+                        break;
+                    case R.id.p2:
+                        mp = MediaPlayer.create(Colores.this, R.raw.preg2co);
+                        break;
+                    case R.id.p3:
+                        mp = MediaPlayer.create(Colores.this, R.raw.preg3co);
+                        break;
+                    case R.id.p4:
+                        mp = MediaPlayer.create(Colores.this, R.raw.preg4co);
                         break;
                 }
                 if (mp != null) {

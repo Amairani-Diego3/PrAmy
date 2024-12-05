@@ -119,7 +119,11 @@ public class Animales extends AppCompatActivity {
                 findViewById(R.id.araton),
                 findViewById(R.id.atiburon),
                 findViewById(R.id.atortuga),
-                findViewById(R.id.atucan)
+                findViewById(R.id.atucan),
+                findViewById(R.id.p1),
+                findViewById(R.id.p2),
+                findViewById(R.id.p3),
+                findViewById(R.id.p4)
         };
 
 
@@ -205,6 +209,18 @@ public class Animales extends AppCompatActivity {
                         break;
                     case R.id.atucan:
                         mp = MediaPlayer.create(Animales.this, R.raw.atoucan);
+                        break;
+                    case R.id.p1:
+                        mp = MediaPlayer.create(Animales.this, R.raw.preg1an);
+                        break;
+                    case R.id.p2:
+                        mp = MediaPlayer.create(Animales.this, R.raw.preg2an);
+                        break;
+                    case R.id.p3:
+                        mp = MediaPlayer.create(Animales.this, R.raw.preg3an);
+                        break;
+                    case R.id.p4:
+                        mp = MediaPlayer.create(Animales.this, R.raw.preg4an);
                         break;
                 }
 
