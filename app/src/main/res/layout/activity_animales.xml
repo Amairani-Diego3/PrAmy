@@ -753,8 +753,8 @@
                 <ImageButton
                     android:id="@+id/p1"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="230px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -813,7 +813,7 @@
                     android:id="@+id/p2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_marginRight="260px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -871,7 +871,7 @@
                     android:id="@+id/p3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_marginRight="360px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -930,7 +930,7 @@
                     android:id="@+id/p4"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_marginRight="180px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />

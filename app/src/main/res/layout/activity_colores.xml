@@ -185,7 +185,7 @@
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
-                    android:layout_height="512dp"
+                    android:layout_height="match_parent"
                     app:srcCompat="@drawable/colores2" />
 
                 <ImageButton
@@ -263,9 +263,9 @@
 
                 <ImageButton
                     android:id="@+id/p1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="500px"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="400px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -322,7 +322,7 @@
                     android:id="@+id/p2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="500px"
+                    android:layout_marginRight="360px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -381,7 +381,7 @@
                     android:id="@+id/p3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="500px"
+                    android:layout_marginRight="460px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />

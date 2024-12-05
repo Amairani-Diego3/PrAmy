@@ -245,8 +245,8 @@
                 <ImageButton
                     android:id="@+id/p1"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="280px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -306,7 +306,7 @@
                     android:id="@+id/p2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_marginRight="280px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -367,7 +367,7 @@
                     android:id="@+id/p3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_marginRight="290px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
@@ -420,11 +420,12 @@
                     android:textColor="#4CAF50"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
                 <ImageButton
                     android:id="@+id/p4"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="250px"
+                    android:layout_marginRight="290px"
                     android:layout_weight="1"
                     android:backgroundTint="#03A9F4"
                     app:srcCompat="@android:drawable/ic_media_play" />
